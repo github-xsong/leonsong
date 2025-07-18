@@ -2,8 +2,8 @@ import { base } from 'astro:config/server'
 
 export async function GET() {
   const manifest = {
-    name: 'Astro AntfuStyle Theme',
-    short_name: 'AntfuStyle',
+    name: 'leonsong',
+    short_name: 'leonsong',
     description:
       'A customizable, feature-rich Astro theme for blog and portfolio',
     icons: [

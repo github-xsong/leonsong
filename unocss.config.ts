@@ -18,7 +18,7 @@ import type {
   ResponsiveSocialItem,
 } from './src/types'
 
-const { internalNavs, socialLinks, githubView } = UI
+const { internalNavs, socialLinks } = UI
 const navIcons = internalNavs
   .filter(
     (item) =>
@@ -45,7 +45,7 @@ const githubVersionColor: Record<string, string> = {
 const githubVersionClass = Object.keys(githubVersionColor).map(
   (k) => `github-${k}`
 )
-const githubSubLogos = githubView.subLogoMatches.map((item) => item[1])
+// const githubSubLogos = githubView?.subLogoMatches.map((item) => item[1]) || []
 
 export default defineConfig({
   // Astro 5 no longer pipes `src/content/**/*.{md,mdx}` through Vite
@@ -115,12 +115,14 @@ export default defineConfig({
         'vertical-align': 'text-bottom',
       },
     }),
+    // 如果网络字体加载有问题，可以暂时注释掉这行
     presetWebFonts({
       fonts: {
         sans: 'Inter:400,600,800',
         mono: 'DM Mono:400,600',
         condensed: 'Roboto Condensed',
       },
+      provider: 'google',
     }),
   ],
 
@@ -143,7 +145,7 @@ export default defineConfig({
 
     /* GithubItem */
     ...githubVersionClass,
-    ...githubSubLogos,
+    // ...githubSubLogos,
 
     /* Toc */
     'i-ri-menu-2-fill',

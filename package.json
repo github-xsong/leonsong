@@ -40,8 +40,6 @@
     "astro": "^5.7.13",
     "astro-expressive-code": "^0.41.2",
     "astro-loader-bluesky-posts": "^1.2.2",
-    "astro-loader-github-prs": "^1.2.1",
-    "astro-loader-github-releases": "^2.0.1",
     "astro-robots-txt": "^1.0.0",
     "chalk": "^5.4.1",
     "del-cli": "^6.0.0",

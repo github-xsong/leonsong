@@ -102,7 +102,7 @@ if (collectionType === 'feeds') {
   (collectionType === 'blog' || collectionType === 'changelog') && (
     <div aria-label="Post list">
       {sortedBlogItems.length === 0 ? (
-        <div class="py-2 op-50">nothing here yet</div>
+        <div class="py-2 op-50">暂无内容</div>
       ) : (
         sortedBlogItems.map(async (item, idx) => {
           const { data, id } = item
@@ -146,7 +146,7 @@ if (collectionType === 'feeds') {
   collectionType === 'streams' && (
     <div aria-label="Stream list">
       {sortedStreamItems.length === 0 ? (
-        <div class="py-2 op-50">nothing here yet</div>
+        <div class="py-2 op-50">暂无内容</div>
       ) : (
         sortedStreamItems.map((item, idx) => {
           return (
@@ -183,7 +183,7 @@ if (collectionType === 'feeds') {
   collectionType === 'feeds' && (
     <div aria-label="Feed list">
       {sortedFeedItems.length === 0 ? (
-        <div class="py-2 op-50">nothing here yet</div>
+        <div class="py-2 op-50">暂无内容</div>
       ) : (
         sortedFeedItems.map((item, idx) => {
           const { data } = item

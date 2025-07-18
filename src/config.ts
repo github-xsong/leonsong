@@ -3,10 +3,10 @@ import type { Site, Ui, Features } from './types'
 export const SITE: Site = {
   website: 'https://astro-antfustyle-theme.vercel.app/',
   base: '/',
-  title: 'Astro AntfuStyle Theme',
+  title: '良颂',
   description:
-    'A customizable, feature-rich Astro theme for blog and portfolio creation',
-  author: 'Stephanie Lin',
+    '良颂的个人网站，记录生活、学习、工作中的点滴。',
+  author: '良颂',
   lang: 'en',
   ogLocale: 'en_US',
   imageDomains: ['cdn.bsky.app', 'images.unsplash.com'],
@@ -16,63 +16,44 @@ export const UI: Ui = {
   internalNavs: [
     {
       path: '/blog',
-      title: 'Blog',
+      title: '技术分享',
       displayMode: 'alwaysText',
-      text: 'Blog',
+      text: '学习笔记',
     },
-    {
-      path: '/projects',
-      title: 'Projects',
-      displayMode: 'alwaysText',
-      text: 'Projects',
-    },
-    {
-      path: '/highlights',
-      title: 'Highlights',
-      displayMode: 'iconToTextOnMobile',
-      text: 'Highlights',
-      icon: 'i-ri-screenshot-line',
-    },
-    {
-      path: '/photos',
-      title: 'Photos',
-      displayMode: 'iconToTextOnMobile',
-      text: 'Photos',
-      icon: 'i-ri-camera-ai-line',
-    },
-    {
-      path: '/shorts',
-      title: 'Shorts',
-      displayMode: 'iconToTextOnMobile',
-      text: 'Shorts',
-      icon: 'i-meteor-icons-grid',
-    },
-    {
-      path: '/changelog',
-      title: 'Changelog',
-      displayMode: 'iconToTextOnMobile',
-      text: 'Changelog',
-      icon: 'i-ri-draft-line',
-    },
+    // {
+    //   path: '/projects',
+    //   title: 'Projects',
+    //   displayMode: 'alwaysText',
+    //   text: 'Projects',
+    // },
+    // {
+    //   path: '/photos',
+    //   title: 'Photos',
+    //   displayMode: 'iconToTextOnMobile',
+    //   text: 'Photos',
+    //   icon: 'i-ri-camera-ai-line',
+    // },
+    // {
+    //   path: '/shorts',
+    //   title: 'Shorts',
+    //   displayMode: 'iconToTextOnMobile',
+    //   text: 'Shorts',
+    //   icon: 'i-meteor-icons-grid',
+    // },
+    // {
+    //   path: '/changelog',
+    //   title: 'Changelog',
+    //   displayMode: 'iconToTextOnMobile',
+    //   text: 'Changelog',
+    //   icon: 'i-ri-draft-line',
+    // },
   ],
   socialLinks: [
     {
-      link: 'https://github.com/lin-stephanie/astro-antfustyle-theme',
-      title: 'AntfuStyle on Github',
+      link: 'https://github.com/github-xsong',
+      title: 'Github 主页',
       displayMode: 'alwaysIcon',
       icon: 'i-uil-github-alt',
-    },
-    {
-      link: 'https://x.com/astrodotbuild',
-      title: 'Astro on Twitter',
-      displayMode: 'alwaysIcon',
-      icon: 'i-ri-twitter-x-fill',
-    },
-    {
-      link: 'https://bsky.app/profile/astro.build',
-      title: 'Astro on Bluesky',
-      displayMode: 'alwaysIcon',
-      icon: 'i-meteor-icons-bluesky',
     },
   ],
   navBarLayout: {
@@ -97,22 +78,22 @@ export const UI: Ui = {
     maxGroupColumns: 3,
     showGroupItemColorOnHover: true,
   },
-  githubView: {
-    monorepos: [
-      'withastro/astro',
-      'withastro/starlight',
-      'lin-stephanie/astro-loaders',
-    ],
-    mainLogoOverrides: [
-      [/starlight/, 'https://starlight.astro.build/favicon.svg'],
-    ],
-    subLogoMatches: [
-      [/theme/, 'i-unjs-theme-colors'],
-      [/github/, 'https://github.githubassets.com/favicons/favicon.svg'],
-      [/tweet/, 'i-logos-twitter'],
-      [/bluesky/, 'i-logos-bluesky'],
-    ],
-  },
+  // githubView: {
+  //   monorepos: [
+  //     'withastro/astro',
+  //     'withastro/starlight',
+  //     'lin-stephanie/astro-loaders',
+  //   ],
+  //   mainLogoOverrides: [
+  //     [/starlight/, 'https://starlight.astro.build/favicon.svg'],
+  //   ],
+  //   subLogoMatches: [
+  //     [/theme/, 'i-unjs-theme-colors'],
+  //     [/github/, 'https://github.githubassets.com/favicons/favicon.svg'],
+  //     [/tweet/, 'i-logos-twitter'],
+  //     [/bluesky/, 'i-logos-bluesky'],
+  //   ],
+  // },
   externalLink: {
     newTab: false,
     cursorType: '',
@@ -146,7 +127,7 @@ export const FEATURES: Features = {
     },
   ],
   share: [
-    true,
+    false,
     {
       twitter: [true, '@ste7lin'],
       bluesky: [true, '@ste7lin.bsky.social'],
@@ -156,11 +137,11 @@ export const FEATURES: Features = {
       reddit: false,
       telegram: false,
       whatsapp: false,
-      email: false,
+      email: true,
     },
   ],
   giscus: [
-    true,
+    false,
     {
       'data-repo': 'lin-stephanie/astro-antfustyle-theme',
       'data-repo-id': 'R_kgDOLylKbA',

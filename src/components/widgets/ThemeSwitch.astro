@@ -18,9 +18,8 @@
     if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
       theme = localStorage.theme
     } else {
-      theme = window.matchMedia('(prefers-color-scheme: dark)').matches
-        ? 'dark'
-        : 'light'
+      // 默认使用暗色主题
+      theme = 'dark'
       window.localStorage.setItem('theme', theme)
     }
 
@@ -150,11 +149,14 @@
     window
       .matchMedia('(prefers-color-scheme: dark)')
       .addEventListener('change', ({ matches }) => {
-        isDark = matches
-        document.documentElement.classList.toggle('dark', isDark)
-        changeGiscusTheme(isDark)
-        if (toggleThemeButton) updateAria(toggleThemeButton)
-        saveTheme()
+        // 只有在用户没有手动设置过主题时才跟随系统
+        if (!localStorage.getItem('theme')) {
+          isDark = matches
+          document.documentElement.classList.toggle('dark', isDark)
+          changeGiscusTheme(isDark)
+          if (toggleThemeButton) updateAria(toggleThemeButton)
+          saveTheme()
+        }
       })
   })
 </script>

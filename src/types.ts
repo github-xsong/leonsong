@@ -499,7 +499,7 @@ export interface Ui {
    *
    * Used in `src/components/views/GithubView.astro`.
    */
-  githubView: GitHubView
+  githubView?: GitHubView
 
   /**
    * Configures external links' behavior and appearance.
